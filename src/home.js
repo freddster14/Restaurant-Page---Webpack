@@ -1,11 +1,11 @@
-import purpleBoba from './purple-boba.jpg'
-import croissant from './croissant.jpg'
+import purpleBoba from './Images/purple-boba.jpg'
+import croissant from './Images/croissant.jpg'
 import './home.css'
 
 
 export default function homeScreen(){
     const body = document.querySelector("#content");
-    const menuContainer = document.createElement('div');
+    const homeContainer = document.createElement('div');
 
     const announcementContainer = document.createElement('div');
     const announcement = document.createElement('div');
@@ -40,7 +40,7 @@ export default function homeScreen(){
 
     endingTitle.innerHTML = '<p>Thanks to <a id="starbucks-link" href="https://www.starbucks.com/" target="_blank">Starbucks</a> for page inspiration.</p><p>Picture of the <a id="" href="https://lehighvalleystyle.com/food/drinks/yobo-bubble-tea/" target="_blank">purple bubble tea</a>.</p><p>Picture of the <a href = "https://unsplash.com/photos/qqIj5pV48-s" target="_blank">croissant</a>.</p>'
 
-    menuContainer.id = 'menu-container'
+    homeContainer.id = 'home-container'
     announcementContainer.id = 'announcement-container'
     announcement.id = 'announcement'
     announcement2.id = 'announcement-2'
@@ -68,10 +68,10 @@ export default function homeScreen(){
 
     footerContainer.appendChild(endingTitle);
 
-    menuContainer.appendChild(announcementContainer);
-    menuContainer.appendChild(box1);
-    menuContainer.appendChild(box2);
-    menuContainer.appendChild(footerContainer);
+    homeContainer.appendChild(announcementContainer);
+    homeContainer.appendChild(box1);
+    homeContainer.appendChild(box2);
+    homeContainer.appendChild(footerContainer);
 
-    body.appendChild(menuContainer);
+    body.appendChild(homeContainer);
 }

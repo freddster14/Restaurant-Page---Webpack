@@ -1,8 +1,8 @@
 import homeScreen from './home.js'
 import menuScreen from './menu.js'
 import './index.css'
-import logo from './logo.png'
-import sidebarLogo from './sidebar.png'
+import logo from './Images/logo.png'
+import sidebarLogo from './Images/sidebar.png'
 
 const body = document.querySelector("#content");
 const homeBtn = document.createElement('button');
@@ -86,9 +86,11 @@ function showMenu(){
 }
 
 homeBtn.addEventListener('click', () => showHome())
+menuBtn.addEventListener('click', () => showMenu())
+
 
 header();
-showHome();
+showMenu();
 
-body.appendChild(overlay);
+body.insertBefore(overlay, body.firstChild);
 
