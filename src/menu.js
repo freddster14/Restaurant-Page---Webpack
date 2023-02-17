@@ -108,13 +108,21 @@ export default function menuScreen(){
     foodName3.textContent = "Crepas";
     foodName4.textContent = "Waffles";
 
+    const footer = document.createElement('div');
+    const footerText = document.createElement('div');
+
+    footer.id = 'footer-container'
+    footerText.id = 'footer-text'
+    menuContainer.appendChild(footer);
+    footer.appendChild(footerText);
+
+    footerText.innerHTML = '<p>Picture of the <a id="" href="https://lehighvalleystyle.com/food/drinks/yobo-bubble-tea/" target="_blank">purple bubble tea</a>.</p>'
+    footerText.innerHTML += '<p>Picture of the <a href="https://unsplash.com/@rosalindjchang?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">original bubble tea</a>.</p>'
+    footerText.innerHTML += '<p>Picture of the <a href="https://unsplash.com/@pariwatt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">frappe coffee</a>.</p>'
+    footerText.innerHTML += '<p>Picture of the <a href="https://unsplash.com/ja/@clintmckoy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">water</a>.</p>'
+    footerText.innerHTML += '<p>Picture of the <a href="https://unsplash.com/@creativeheadline?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">burrito</a>.</p>'
+    footerText.innerHTML += '<p>Picture of the <a href = "https://unsplash.com/photos/qqIj5pV48-s" target="_blank">croissant</a>.</p>'
+    footerText.innerHTML += '<p>Picture of the <a href="https://unsplash.com/@mdagonakis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">crepas</a>.</p>'
+    footerText.innerHTML += '<p>Picture of the <a href="https://unsplash.com/@miracletwentyone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">waffles</a>.</p>'
     
-    // orginal bubble tea credit Photo by <a href="https://unsplash.com/@rosalindjchang?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rosalind Chang</a> on <a href="https://unsplash.com/photos/P_wPicZYoPI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-    // Photo by <a href="https://unsplash.com/@pariwatt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">pariwat pannium</a> on <a href="https://unsplash.com/photos/T0Kjp5ntdtc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-    //Photo by <a href="https://unsplash.com/ja/@clintmckoy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Clint McKoy</a> on <a href="https://unsplash.com/photos/727xRkA3t1s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-    
-    //Photo by <a href="https://unsplash.com/@creativeheadline?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Creative Headline</a> on <a href="https://unsplash.com/photos/F10nTHkCiW8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-    //
-    //Photo by <a href="https://unsplash.com/@mdagonakis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michael Dagonakis</a> on <a href="https://unsplash.com/photos/AVWwTUH9YAI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-    //Photo by <a href="https://unsplash.com/@miracletwentyone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joseph Gonzalez</a> on <a href="https://unsplash.com/photos/Wns3U-oVoLA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 }

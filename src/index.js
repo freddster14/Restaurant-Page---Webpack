@@ -8,7 +8,10 @@ const body = document.querySelector("#content");
 const homeBtn = document.createElement('button');
 const menuBtn = document.createElement('button');
 const contactBtn = document.createElement('button');
-const overlay = document.createElement('div')
+const overlay = document.createElement('div');
+const sidebarBtn = document.createElement('input');
+
+let smallScreen = undefined
 
 function header(){
     const topBar = document.createElement('div');
@@ -47,29 +50,36 @@ function header(){
     if(screenWidth < 761 )runFunction();
     
     function runFunction(){
-        const sidebarBtn = document.createElement('input');
         sidebarBtn.type = "image";
         sidebarBtn.src = sidebarLogo;
         sidebarBtn.id = "sidebar-btn";
         topBar.appendChild(sidebarBtn);
-        sidebarBtn.addEventListener('click', () => {
+        smallScreen = true
+        
+        
+    }
+    
+    sidebarBtn.addEventListener('click', () => {
         containerBtn.classList.toggle("active");
         overlay.classList.toggle("active");
         });
-        return true
-    }
-    
+        
     let mq = window.matchMedia("(max-width: 760px)");
     
     mq.addListener((event) => {
       if (event.matches) {
         runFunction();
-      }else {topBar.removeChild(topBar.lastChild)}
+        
+      }else {topBar.removeChild(topBar.lastChild); smallScreen = false}
     })
 
 }
 
-
+function removeSideBar(){
+    if(smallScreen){ 
+        sidebarBtn.click()
+    }
+}
 
 function removeContent(){
     body.removeChild(body.lastChild)
@@ -77,16 +87,18 @@ function removeContent(){
 
 function showHome(){
     if(body.children.length > 1)removeContent();
+    
     homeScreen();
 }
 
 function showMenu(){
     if(body.children.length > 1)removeContent();
+    
     menuScreen();
 }
 
-homeBtn.addEventListener('click', () => showHome())
-menuBtn.addEventListener('click', () => showMenu())
+homeBtn.addEventListener('click', () => {showHome(); removeSideBar()})
+menuBtn.addEventListener('click', () => {showMenu(); removeSideBar()})
 
 
 header();

@@ -50,7 +50,7 @@ p{width: 80%;}
 
 #bubble-tea, #croissant-img{width: min(50%, 100%); max-height: 760px;}
 
-#footer-container{
+ #home-container #footer-container{
     display: flex;
     justify-content: center;
     background-color: #33261b;
