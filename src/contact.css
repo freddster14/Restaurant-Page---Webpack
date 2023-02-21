@@ -17,19 +17,19 @@
 
 #contact-header img {
     width: 100%;
-    filter: blur(1px);
 }
 
 #contact-header h1{
     position: absolute;
-    top: 49.5%;
+    top: 49.4%;
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.644);
     color: white;
     font-size: 2.8em;
-    padding: 70px 78px;
+    width: 230px;
+    padding: 13% 37%;
 }
 #info-container-1, #info-container-2{
     display: flex;
@@ -38,16 +38,37 @@
 
 .info-boxes{
     display: flex;
+    gap: 15px;
     align-items: center;
-    min-width: 230px;
-    max-width: 301px;
+    min-width: 270px;
+    max-width: 375px;
+    margin: 20px 15px;
 }
 
 .info-boxes p{
     width: fit-content;
+    font-size: 1.4em;
+
 }
 
-.info-boxes img{
-    max-width: 55px;
-    margin: 15px 20px;
+.info-boxes img{max-width: 60px;}
+
+@media only screen and (max-width: 760px){
+
+    #contact-header h1{
+        font-size: 2em;
+        padding: 13% 25%;
+    }
+    #info-container-1, #info-container-2{
+        display: flex;
+        flex-direction: column;
+    }
+    .info-boxes{
+        min-width: 150px;
+        max-width: 310px;
+    }
+    .info-boxes p{font-size: 1.2em;}
+    
+    .info-boxes img{max-width: 45px;}
+
 }

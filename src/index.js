@@ -96,7 +96,7 @@ menuBtn.addEventListener('click', () => {showMenu(); removeSideBar();})
 contactBtn.addEventListener('click', () => {showContact(); removeSideBar();})
 
 header();
-showContact();
+showHome();
 
 body.insertBefore(overlay, body.firstChild);
 

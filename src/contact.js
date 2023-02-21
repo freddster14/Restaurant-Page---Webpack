@@ -65,15 +65,19 @@ export default function contactScreen(){
     boxInfo1.appendChild(phoneBox);
     addressBox.appendChild(addressImg);
     addressBox.appendChild(addressText);
-    phoneBox.appendChild(phoneNumber);
+
     phoneBox.appendChild(phoneImg);
+        phoneBox.appendChild(phoneNumber);
+        emailBox.appendChild(emailImg);
+        emailBox.appendChild(emailText);
 
     boxInfo2.appendChild(timeOpenBox);
     boxInfo2.appendChild(emailBox);
     timeOpenBox.appendChild(timeOpenImg);
     timeOpenBox.appendChild(timeOpenText);
-    emailBox.appendChild(emailText);
-    emailBox.appendChild(emailImg);
+
+   
+
 
 };
 
