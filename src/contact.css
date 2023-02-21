@@ -48,16 +48,27 @@
 .info-boxes p{
     width: fit-content;
     font-size: 1.4em;
-
 }
 
 .info-boxes img{max-width: 60px;}
 
+#photo-credit{
+    background-color: rgba(0, 0, 0, 0.644);
+    position: fixed;
+    padding: 7px;
+    font-size: 1.1em;
+    left: 0;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
 @media only screen and (max-width: 760px){
 
     #contact-header h1{
-        font-size: 2em;
-        padding: 13% 25%;
+        font-size: 1.9em;
+        padding: 10% 18%;
     }
     #info-container-1, #info-container-2{
         display: flex;

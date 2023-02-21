@@ -29,11 +29,14 @@ export default function contactScreen(){
     const phoneNumber = document.createElement('p');
     const timeOpenText = document.createElement('p');
     const emailText = document.createElement('p');
+    const photoCredit = document.createElement('p');
 
     contactContainer.id = "contact-container";
     contactHeader.id = "contact-header";
     boxInfo1.id = "info-container-1";
     boxInfo2.id = "info-container-2";
+    photoCredit.id = "photo-credit";
+
     addressBox.classList.add("info-boxes");
     phoneBox.classList.add("info-boxes");
     timeOpenBox.classList.add("info-boxes");
@@ -52,11 +55,14 @@ export default function contactScreen(){
     timeOpenText.textContent = 'Mon - Fri: 5:00 AM - 9:00 PM     Sat - Sun: 7:00 AM - 8:00 PM';
     emailText.textContent = 'contact@nats.com'
 
+    photoCredit.innerHTML = 'Background picture: <a href="https://unsplash.com/@matiinu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Matiinu Ramadhan</a>'
+
     body.appendChild(contactContainer);
 
     contactContainer.appendChild(contactHeader);
     contactContainer.appendChild(boxInfo1);
     contactContainer.appendChild(boxInfo2);
+    contactContainer.appendChild(photoCredit)
 
     contactHeader.appendChild(headerImg);
     contactHeader.appendChild(title)
@@ -86,5 +92,5 @@ export default function contactScreen(){
 
 
 
-//Background picture: <a href="https://unsplash.com/@matiinu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Matiinu Ramadhan</a>
+//
   
