@@ -78,6 +78,7 @@
     #drink-container, #food-container{
         grid-template-columns: 1fr;
         gap: 25px;
+        padding: 27px 6.6%;
     }
 
     .drink-images, .food-images{width: min(40%, 100%);}

@@ -1,5 +1,6 @@
 import homeScreen from './home.js'
 import menuScreen from './menu.js'
+import contactScreen from './contact.js'
 import './index.css'
 import logo from './Images/logo.png'
 import sidebarLogo from './Images/sidebar.png'
@@ -55,54 +56,47 @@ function header(){
         sidebarBtn.id = "sidebar-btn";
         topBar.appendChild(sidebarBtn);
         smallScreen = true
-        
-        
     }
     
     sidebarBtn.addEventListener('click', () => {
         containerBtn.classList.toggle("active");
         overlay.classList.toggle("active");
         });
-        
+
     let mq = window.matchMedia("(max-width: 760px)");
     
     mq.addListener((event) => {
       if (event.matches) {
         runFunction();
-        
       }else {topBar.removeChild(topBar.lastChild); smallScreen = false}
     })
-
 }
 
-function removeSideBar(){
-    if(smallScreen){ 
-        sidebarBtn.click()
-    }
-}
+function removeSideBar() {if(smallScreen)sidebarBtn.click()}
 
-function removeContent(){
-    body.removeChild(body.lastChild)
-}
+function removeContent() {body.removeChild(body.lastChild)}
 
 function showHome(){
     if(body.children.length > 1)removeContent();
-    
     homeScreen();
 }
 
 function showMenu(){
     if(body.children.length > 1)removeContent();
-    
     menuScreen();
 }
 
-homeBtn.addEventListener('click', () => {showHome(); removeSideBar()})
-menuBtn.addEventListener('click', () => {showMenu(); removeSideBar()})
+function showContact(){
+    if(body.children.length > 1)removeContent();
+    contactScreen();
+}
 
+homeBtn.addEventListener('click', () => {showHome(); removeSideBar();})
+menuBtn.addEventListener('click', () => {showMenu(); removeSideBar();})
+contactBtn.addEventListener('click', () => {showContact(); removeSideBar();})
 
 header();
-showMenu();
+showContact();
 
 body.insertBefore(overlay, body.firstChild);
 
