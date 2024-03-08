@@ -3,7 +3,7 @@ Live Preview: [Click Here](https://zeronicc.github.io/Restaurant-Page---Webpack/
 ## Technologies Used
 
 * Webpack (5.75.0)
-* JavaScript (ES6)
+* JavaScript
 * HTML5
 * CSS3
 
