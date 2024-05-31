@@ -1,5 +1,5 @@
 # Restaurant-Page---Webpack
-Live Preview: [Click Here](https://zeronicc.github.io/Restaurant-Page---Webpack/)
+Live Preview: [Click Here](https://freddster14.github.io/Restaurant-Page---Webpack/)
 ## Technologies Used
 
 * Webpack (5.75.0)
